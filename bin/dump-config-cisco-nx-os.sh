@@ -12,6 +12,6 @@ spawn ssh -o \"StrictHostKeyChecking no\" ${USER}@${HOST} show run
 
 expect -nocase \"password:\"
 send \"${PASSWORD}\n\"
-interact
+expect eof
 exit
 " | grep -A $MAX_LINES "version"
