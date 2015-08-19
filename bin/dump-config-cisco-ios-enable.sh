@@ -28,4 +28,4 @@ send \"show run\n\"
 expect \"end\r\n\"
 expect \"#$\"
 exit
-" | grep -A $MAX_LINES "Current" | grep -B $MAX_LINES "^end\r$"
+" | grep -A $MAX_LINES "Current" | grep -B $MAX_LINES "end"
